@@ -10,7 +10,7 @@ import {SearchHistory} from "./model/history/SearchHistory";
 
 import * as templates from './view/templates';
 import * as constants from './constants';
-import {mockBeackend} from "./constants";
+import {mockBackend} from "./constants";
 
 //-------------------------------------------
 // Globals
@@ -77,14 +77,14 @@ export function renderPopularView() {
 
 export function renderSoonView() {
     //Load and generate page template
-    $('#view').append(templates.popularPageHtml);
+    $('#view').append(templates.soonPageHtml);
 
     //Get Movies
     getMovies(constants.urlSoon);
 }
 
 export function renderFavoritesView() {
-    $('#view').append(templates.ratingPageHtml);
+    $('#view').append(templates.favPageHtml);
 
     getFavoriteMovies();
 }
@@ -316,7 +316,7 @@ function getFavoriteMovies() {
     movieModel.resetMovieList();
 
 
-    if(mockBeackend) {
+    if(mockBackend) {
         //Mock
         for (const movie of favoriteList) {
             movieModel.addMovie(movie);
@@ -334,7 +334,7 @@ function getFavoriteMovies() {
 }
 
 function isMovieFavorite(id : any){
-    if(mockBeackend) {
+    if(mockBackend) {
         //Mock
         for (const movie of favoriteList) {
             if (movie.id == id) {
@@ -363,7 +363,7 @@ function addMovieToFavorite(id : any) {
         console.log('Add Favorite: Movie arlready is Favorite');
     } else {
         //Mock
-        if(mockBeackend) {
+        if(mockBackend) {
             var movie = movieModel.getMovie(id);
 
             favoriteList.push(movie);
@@ -378,7 +378,7 @@ function addMovieToFavorite(id : any) {
 }
 
 function removeMovieFromFavorite(id : any) {
-    if(mockBeackend) {
+    if(mockBackend) {
         //Mock
         for (const movie of favoriteList) {
             if (movie.id == id) {
@@ -406,7 +406,7 @@ function getHistory() {
     historyModel.resetHistoryList();
 
     //Mock
-    if(mockBeackend) {
+    if(mockBackend) {
         for (const searchHistory of historyList) {
             historyModel.addHistoryEntry(searchHistory)
         }
@@ -426,7 +426,7 @@ function getHistory() {
 }
 
 function addToHistory(searchStr : string, searchResults : number) {
-    if(mockBeackend) {
+    if(mockBackend) {
         //Mock
         historyList.push(new SearchHistory(searchStr, searchResults));
     } else {

@@ -1,7 +1,7 @@
 //-------------------------------------------
-// The movie db constants
+// Backend mock
 //-------------------------------------------
-export let mockBeackend : boolean = true;
+export let mockBackend : boolean = true;
 
 //-------------------------------------------
 // The movie db constants
