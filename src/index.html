@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Movie World</title>
+        <!--<link rel="stylesheet" href="css/index.less" />-->
+        <!--<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css"/>-->
+        <!--<link rel="stylesheet/less" type="text/css" href="index.less">-->
+        <style>
+            /* Remove the navbar's default margin-bottom and rounded borders */
+            .navbar {
+                margin-bottom: 0;
+                border-radius: 0;
+            }
+
+            /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+            .row.content {height: 450px}
+
+            /* Set gray background color and 100% height */
+            .sidenav {
+                padding-top: 20px;
+                background-color: #f1f1f1;
+                height: 100%;
+            }
+
+            /* Set black background color, white text and some padding */
+            footer {
+                background-color: #555;
+                color: white;
+                padding: 15px;
+            }
+
+            /* On small screens, set height to 'auto' for sidenav and grid */
+            @media screen and (max-width: 767px) {
+                .sidenav {
+                    height: auto;
+                    padding: 15px;
+                }
+                .row.content {height:auto;}
+            }
+        </style>
+    </head>
+    <body>
+
+
+<div id="container" class="container">
+
+    <!--Navbar-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Movie World</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <!--Menus-->
+                <ul class="nav navbar-nav">
+                    <li id='searchMenu'><a id="route-search" href="#search">Search</a></li>
+                    <li id='top20Menu' class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Top 20<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li id='ratingMenu'><a id="route-rating" href="#rating">Rating</a></li>
+                            <li id='genreMenu'><a id="route-genre" href="#genre">Genre</a></li>
+                            <li id='popularMenu'><a id="route-popular" href="#popular">Popular</a></li>
+                        </ul>
+                    </li>
+                    <li id='soonMenu'><a id="route-soon" href="#soon">Soon</a></li>
+                </ul>
+                <!--Icons-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li id='favMenu'><a id="route-fav" href="#fav"><span class="glyphicon glyphicon glyphicon-star"></span>Favorites</a></li>
+                    <li id='historyMenu'><a id="route-history" href="#history"><span class="glyphicon glyphicon-time"></span>History</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Main Body-->
+    <div id="view">
+
+    </div>
+
+    <!--Footer-->
+    <div id="footer" class="footer">
+        <div class="db-logo"></div>
+    <span>This product uses the TMDb API but is not endorsed or certified by TMDb. (c) 2018 - Miguel Iglesias</span>
+    </div>
+
+
+</div>
+
+
+
+    </body>
+</html>
